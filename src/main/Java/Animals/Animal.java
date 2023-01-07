@@ -1,15 +1,22 @@
 package Animals;
 
-public class Animal {
-    private final String name;
-    private final int canRun;
-    private final int canSwim;
-    private static int numberOfObjects = 0;
+public abstract class Animal {
+    String name;
+    int canRun;
+    int canSwim;
+    static int numberOfObjects = 0;
 
-    public static void getNumberOfObjects() {
-        System.out.println("Created objects : " + numberOfObjects);
+    public String getName() {
+        return name;
     }
 
+    public int getCanRun() {
+        return canRun;
+    }
+
+    public int getCanSwim() {
+        return canSwim;
+    }
 
     public Animal(String name, int canRun, int canSwim) {
         this.name = name;
@@ -19,29 +26,14 @@ public class Animal {
 
     }
 
-    public void run() {
-
-    }
-
-    public void swim() {
-
+    public static void getNumberOfObjects() {
+        System.out.println("Created objects : " + numberOfObjects);
     }
 
 
+    public abstract void run();
 
-    public String getName() {
-        return name;
-    }
-
-
-    public int getCanRun() {
-        return canRun;
-    }
-
-
-    public int getCanSwim() {
-        return canSwim;
-    }
+    public abstract void swim();
 
 
 }
