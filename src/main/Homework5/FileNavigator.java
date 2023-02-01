@@ -37,7 +37,7 @@ public class FileNavigator {
     }
 
     public List<FileData> sortBySize() {
-        List<FileData> sortedFiles = this.filterSize(Integer.MAX_VALUE);
+        List<FileData> sortedFiles = filterSize(Integer.MAX_VALUE);
         sortedFiles.sort(FileData::compareTo);
         return sortedFiles;
     }
