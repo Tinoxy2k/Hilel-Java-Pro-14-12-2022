@@ -25,7 +25,7 @@ public class FileData implements Comparable<FileData> {
 
     @Override
     public int compareTo(FileData o) {
-        return 0;
+        return this.fileSize-o.fileSize;
     }
 
     @Override
