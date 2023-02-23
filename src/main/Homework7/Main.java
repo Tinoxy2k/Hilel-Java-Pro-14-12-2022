@@ -12,12 +12,12 @@ public class Main {
         BookSerialize bookSerialize = new BookSerialize();
 
 
-        final String PATH = "src/main/resources/";
+        final String PATH = "src/main/Homework7/Book/";
         boolean exitCommand = false;
 
 
         while (!exitCommand) {
-            System.out.println("Enter the name of the book : ");
+            System.out.print("Enter the name of the book : ");
             File file = new File(PATH + scanner.next().trim());
             System.out.print("""
                       Welcome to book parser.
@@ -47,7 +47,7 @@ public class Main {
                     List<String> TopWords = parser.topWords(words, 10);
                     int UniqWords = parser.uniqWords(words);
                     BookStatistic statistic = new BookStatistic(TopWords, UniqWords);
-                    bookSerialize.serialize(statistic, new File(PATH + file.getName() + "statistic.txt"));
+                    bookSerialize.serialize(statistic, new File(PATH + file.getName() + ".statistic.txt"));
 
                 }
 
