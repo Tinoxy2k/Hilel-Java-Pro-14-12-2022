@@ -26,7 +26,7 @@ public class TwoSumTest {
     @DisplayName("Test method twoSum  Failed")
     @Test
 
-    public void NotContainsTwoSum(){
+    public void NotContainsTwoSumFailed(){
         int[] numbers = new int[]{4,2,4};
         int[] expected =  new int[]{0,1};
         int target = 8;
