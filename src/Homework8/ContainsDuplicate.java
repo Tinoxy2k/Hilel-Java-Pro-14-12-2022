@@ -6,11 +6,11 @@ import java.util.Set;
 public class ContainsDuplicate {
     public boolean containsDuplicate(int[] nums) {
         Set<Integer> dublicatedNumb = new HashSet<>();
-        for (int i = 0; i < nums.length; i++) {
-            if (dublicatedNumb.contains(nums[i])) {
-
+        for (int num : nums) {
+            if (dublicatedNumb.contains(num)) {
+                return true;
             }
-            dublicatedNumb.add(nums[i]);
+            dublicatedNumb.add(num);
         }
         return false;
     }
